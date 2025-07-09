@@ -57,7 +57,7 @@ public class Queue extends DynamicArray implements Comparable<Queue>, Xifo<Strin
         // initialzing return statement
         String retStr = "";
         // for loop that builds the mid contents
-        for (int i = 0; i < this.getUnderlying.length; i++) {
+        for (int i = 0; i < this.getOccupancy(); i++) {
             if (i == 0) {
                 mid += this.getUnderlying()[i];
             } else {

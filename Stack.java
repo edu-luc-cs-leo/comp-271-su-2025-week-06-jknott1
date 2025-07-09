@@ -18,9 +18,9 @@ public class Stack extends DynamicArray implements Comparable<Stack>, Xifo<Strin
     public String peek() {
         // initializing variable representative of the top of the stack
         // default initialization of null
-        int top = null;
+        String top = null;
         if (this.getOccupancy() > 0) {
-            // if the stack isn't empty, the last value is assigned to "top"
+            // as long as the stack isn't empty, the last value is assigned to "top"
             top = this.getUnderlying()[this.getOccupancy() - 1];
         return top;
         }
@@ -58,7 +58,7 @@ public class Stack extends DynamicArray implements Comparable<Stack>, Xifo<Strin
         // initialzing return statement
         String retStr = "";
         // for loop that builds the mid contents
-        for (int i = 0; i < this.getUnderlying.length; i++) {
+        for (int i = 0; i < this.getOccupancy(); i++) {
             if (i == 0) {
                 mid += this.getUnderlying()[i];
             } else {
@@ -70,9 +70,9 @@ public class Stack extends DynamicArray implements Comparable<Stack>, Xifo<Strin
     } // method toString
 
     public void push(String e) {
-        String[] temp = new String[this.size + 1];
+        String[] temp = new String[this.getOccupancy() + 1];
         temp[0] = e;
-        for (i = 1; i < temp.length; i++) {
+        for (int i = 1; i < temp.length; i++) {
             temp[i] = this.getUnderlying()[i-1];
         }
         this.setUnderlying(temp);
