@@ -30,6 +30,16 @@ public class DynamicArray {
         this(DEFAULT_SIZE);
     } // default constructor
 
+    /** accessor for underlying */
+    public String[] getUnderlying(){
+        return this.underlying;
+    } // method getUnderlying
+    
+    /** setter for underlying */
+    public void setUnderlying(String[] array) {
+        this.underlying = array;
+    }
+
     /** Simple accessor for occupancy */
     public int getOccupancy() {
         return this.occupancy;
